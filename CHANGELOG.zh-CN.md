@@ -15,6 +15,57 @@ timeline: true
 
 ---
 
+## 3.26.18
+
+`2020-06-14`
+
+- 🐞 修正了 Tree `AntTreeNodeProps.children` 的类型。[#24429](https://github.com/ant-design/ant-design/pull/24429) [@fireairforce](https://github.com/fireairforce)
+- 🇮🇪 添加爱尔兰语国际化支持。[#24849](https://github.com/ant-design/ant-design/pull/24849) [@AbhijeetGaware](https://github.com/AbhijeetGaware)
+
+## 3.26.17
+
+`2020-05-16`
+
+- 🐞 修复 Upload.Dragger 禁用时依然会被 Form `label` 触发的问题。[#24202](https://github.com/ant-design/ant-design/pull/24202)
+- 🐞 修复 Tabs 开启动画时 Safair 下无法显示的问题。[#23151](https://github.com/ant-design/ant-design/pull/23151)
+- 🐞 修复 Form.Item 不设置 `hasFeedback` 时校验图标闪动问题。[#23924](https://github.com/ant-design/ant-design/pull/23924)
+- 🐞 修复 `loading` Button 使用 Badge 时的样式问题。[#23691](https://github.com/ant-design/ant-design/pull/23691)
+
+## 3.26.16
+
+`2020-04-26`
+
+- 🐞 修复 Carousel 键盘切换到非活跃 slide 上的 Radio/Checkbox 的问题。[#23380](https://github.com/ant-design/ant-design/pull/23380)
+- 🐞 修复 Table 筛选菜单在 less 版本为 `2.x` 时不显示的问题。[#23272](https://github.com/ant-design/ant-design/pull/23272)
+
+## 3.26.15
+
+`2020-04-03`
+
+- 🐞 修复 Affix 抛出 `React state update on unmounted component` 警告的问题。[#22790](https://github.com/ant-design/ant-design/pull/22790)
+- 🐞 修复 Table `column.filtered` 失效的问题。[#22597](https://github.com/ant-design/ant-design/pull/22597)
+- 🐞 修复 Select `multiple` 模式下，Input 在 Safari 浏览器的样式问题。[#22586](https://github.com/ant-design/ant-design/pull/22586) [@iicdii](https://github.com/iicdii)
+
+## 3.26.14
+
+`2020-03-23`
+
+- 🐞 修复 Descriptions 在小尺寸下无法自适应的问题。[#22407](https://github.com/ant-design/ant-design/pull/22407)
+- 🐞 修复 TextArea `autoSize` 时在 Firefox 下不会自动滚动到底的问题。[#22014](https://github.com/ant-design/ant-design/pull/22014)
+- 🐞 修复 TextArea 样式在 `react@16.13` 下会报警告的问题。[#21703](https://github.com/ant-design/ant-design/pull/21703)
+- Typescript
+  - 调整 Popconfirm `onConfirm` `onCancel` 事件类型定义。[#22438](https://github.com/ant-design/ant-design/pull/22438) [@nicu-chiciuc](https://github.com/nicu-chiciuc)
+
+## 3.26.13
+
+`2020-03-07`
+
+- 🐞 修复 Result `status` 属性不能赋值 `string` 或者 `number` 类型的问题。[#21691](https://github.com/ant-design/ant-design/pull/21691)
+- 🐞 修复 Badge 数字在 10 和 11 切换时的动画错误。[#21887](https://github.com/ant-design/ant-design/pull/21887) [@wendellhu95](https://github.com/wendellhu95)
+- 🐞 修复 DatePicker 日历图标在禁用时的手型。[#21655](https://github.com/ant-design/ant-design/pull/21655) [@jhoneybee](https://github.com/jhoneybee)
+- 🐞 修复 Grid 多个 Row 之间的边距叠加问题。[#21518](https://github.com/ant-design/ant-design/pull/21518) [@felipeptcho](https://github.com/felipeptcho)
+- 🐞 修复 Table 筛选菜单高度溢出屏幕的问题。[#21602](https://github.com/ant-design/ant-design/pull/21602)
+
 ## 3.26.12
 
 `2020-02-24`
@@ -22,7 +73,6 @@ timeline: true
 - 🐞 修复 Input 在设置 `readOnly` 时 `allowClear` 仍然可以清除的问题。[#21492](https://github.com/ant-design/ant-design/pull/21492)
 - 🐞 修复 Upload 列表默认情况下不展现下载按钮。[#21496](https://github.com/ant-design/ant-design/pull/21496)
 - ⚡️ 提升 Button 渲染性能。[#21217](https://github.com/ant-design/ant-design/pull/21217)
-
 
 ## 3.26.11
 
@@ -2669,7 +2719,7 @@ timeline: true
   - 🙅 废弃以下属性 `onRowClick`，`onRowDoubleClick`、`onRowContextMenu`、`onRowMouseEnter`、`onRowMouseLeave`，请使用 `onRow` 代替。
     ```javascript
     <Table
-      onRow={record => ({
+      onRow={(record) => ({
         onClick: () => {},
         onDoubleClick: () => {},
         onContextMenu: () => {},
